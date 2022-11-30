@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from "mongoose";
 import cors from 'cors';
 import usersController from './controllers/users/users-controller.js';
+import * as dotenv from 'dotenv';
+dotenv.config()
 // import AuthController from "./controllers/AuthController.js";
 
 const app = express();
@@ -13,8 +15,8 @@ const corsConfig = {
 app.use(cors(corsConfig));
 app.use(express.json());
 
-const uri = 'mongodb://localhost:27017/jobseed';
-mongoose.connect('mongodb://localhost:27017/jobseed');
+const uri = `mongodb+srv://yi1w:${process.env.mongodbpw}@cluster0.hyy8m1u.mongodb.net/?retryWrites=true&w=majority`;
+mongoose.connect(uri);
 app.get('/', (req, res) =>
     res.send('<h1>App Loaded!</h1>'));
 
