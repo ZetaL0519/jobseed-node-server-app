@@ -1,46 +1,33 @@
-import jobs from './jobs.json';
+import * as jobDao from "./jobs-dao.js"
 
-export const getJobs = () => jobs;
-
-const JobsController = (app) => {
-
-    const createJob = (req, res) => {
-        const job = req.body
-        job["_id"] = (new Date()).getTime() + ''
-        job["likes"] = 0
-        job["liked"] = false
-        jobs.push(job)
-        res.send(job)
-    }
-
-    const findAllJobs = (req, res) => {
-        res.send(jobs)
-    }
-
-    const updateJob = (req, res) => {
-        const jid = req.params['jid']
-        const jobUpdates = req.body
-        const jobIndex = jobs.findIndex(
-            (j) => j._id === jid)
-        jobs[jobIndex] = {
-            ...jobs[jobIndex],
-            ...jobUpdates
-        }
-        res.send(200)
-    }
-
-    const deleteJob = (req, res) => {
-        const jid = req.params['jid']
-        jobs = jobs.filter(
-            (j) => j._id !== jid
-        )
-        res.send(200)
-    }
-
-    app.post('/jobs', createJob)
-    app.get('/jobs', findAllJobs)
-    app.put('/jobs/:jid', updateJob)
-    app.delete('/jobs/:jid', deleteJob)
+const findJobs = async (req, res) => {
+    const jobs = await jobDao.findJobs();
+    res.json(jobs)
 }
 
-export default JobsController;
+const updateJob = async(req, res) => {
+    const jid = req.params.jid;
+    const job = req.body;
+    const status = await userDao.updateUser(jid, job);
+    res.json(status)
+}
+
+const findJobByTitle = async(req, res) => {
+    const jobTitle = req.params.jobTitle;
+    const jobs = await jobDao.findJobByTitle(jobTitle);
+    res.json(jobs);
+}
+
+const findJobBylocationtitle = async(req, res) => {
+    const location = req.params.location;
+    const title = req.params.title;
+    const jobs = await jobDao.findJobBylocationtitle(location, title);
+    res.json(jobs);
+}
+
+export default (app) => {
+    app.get('/api/jobs', findJobs);
+    app.put('/api/jobs/:jid', updateJob);
+    app.get('/api/jobs/:jobTitle', findJobByTitle)
+    app.get('/api/jobs/:location/:title', findJobBylocationtitle)
+}

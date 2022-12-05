@@ -8,6 +8,7 @@ const schema = mongoose.Schema({
     avatar: String,
     biography: String,
     dateOfBirth: Date,
+    resume: String,
     accountType: {type: String, enum: ["SEEKER", "EMPLOYER"]},
     isAdmin:{
         type: Boolean,
