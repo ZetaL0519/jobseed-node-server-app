@@ -12,9 +12,9 @@ const updateJob = async(req, res) => {
     res.json(status)
 }
 
-const findJobByTitle = async(req, res) => {
-    const jobTitle = req.params.jobTitle;
-    const jobs = await jobDao.findJobByTitle(jobTitle);
+const findJobByKey = async(req, res) => {
+    const key = req.params.key;
+    const jobs = await jobDao.findJobByKey(key);
     res.json(jobs);
 }
 
@@ -28,6 +28,6 @@ const findJobBylocationtitle = async(req, res) => {
 export default (app) => {
     app.get('/api/jobs', findJobs);
     app.put('/api/jobs/:jid', updateJob);
-    app.get('/api/jobs/:jobTitle', findJobByTitle)
+    app.get('/api/jobs/:key', findJobByKey)
     app.get('/api/jobs/:location/:title', findJobBylocationtitle)
 }

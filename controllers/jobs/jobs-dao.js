@@ -4,8 +4,9 @@ export const findJobs = () => JobModel.find();
 
 export const updateJob = (jid, job) => JobModel.updateOne({_id: jid}, {$set: job})
 
-export const findJobByTitle = async (jt) => {
-    const jobs = await JobModel.find({jobtitle: {$regex: jt, $options:'i'} })
+export const findJobByKey = async (key) => {
+    const reg = new RegExp(key, 'i')
+    const jobs = await JobModel.find({$or: [{jobtitle: {$regex: reg}}, {location: {$regex: reg}}, {companyname: {$regex: reg}}]});
     return jobs;
 }
 
