@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from "mongoose";
 import cors from 'cors';
 import usersController from './controllers/users/users-controller.js';
+import JobsController from './controllers/jobs/jobs-controller.js';
 import * as dotenv from 'dotenv';
 dotenv.config()
 // import AuthController from "./controllers/AuthController.js";
@@ -21,6 +22,7 @@ app.get('/', (req, res) =>
     res.send('<h1>App Loaded!</h1>'));
 
 usersController(app);
+JobsController(app);
 
 const PORT = 4000;
 app.listen(process.env.PORT || PORT);
