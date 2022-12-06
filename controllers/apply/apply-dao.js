@@ -1,4 +1,5 @@
 import ApplyModel from "./apply-model.js";
+import JobModel from '../jobs/jobs-model.js';
 
 export const findAllApplys = () => ApplyModel.find();
 

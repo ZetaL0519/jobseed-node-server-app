@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const AuthenticationController = (app) => {
     const userDao = UserDao.getInstance();
-    const signup = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const newUser = req.body;
         const password = newUser.password;
         const hash = yield bcrypt.hash(password, saltRounds);
@@ -45,7 +45,7 @@ const AuthenticationController = (app) => {
             res.sendStatus(403);
         }
     });
-    app.post("/api/auth/signup", signup);
+    app.post("/api/auth/signup", register);
     app.post("/api/auth/logout", logout);
     app.post("/api/auth/login", login);
 };

@@ -28,6 +28,6 @@ const deleteApply = async(req, res) => {
 export default (app) => {
     app.get('/api/applys', findAllApply);
     app.get('/api/:uid/applys', findAllApplyByUser);
-    app.put('/api/:uid/applys/:jid', createApplyByUser);
+    app.post('/api/:uid/applys/:jid', createApplyByUser);
     app.delete('/api/:uid/applys/:jid', deleteApply);
 }
