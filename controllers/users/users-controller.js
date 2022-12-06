@@ -8,6 +8,7 @@ const findUsers = async (req, res) => {
 const createUser = async(req, res) => {
     const user = req.body;
     const newuser = await userDao.createUser(user);
+    console.log(newuser);
     res.json(newuser);
 }
 

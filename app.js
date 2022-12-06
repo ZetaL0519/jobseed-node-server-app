@@ -4,7 +4,9 @@ import cors from 'cors';
 import usersController from './controllers/users/users-controller.js';
 import JobsController from './controllers/jobs/jobs-controller.js';
 import ApplyController from "./controllers/apply/apply-controller.js"
+import CollectController from './controllers/collect/collect-controller.js';
 import * as dotenv from 'dotenv';
+
 dotenv.config()
 // import AuthController from "./controllers/AuthController.js";
 
@@ -17,7 +19,8 @@ const corsConfig = {
 app.use(cors(corsConfig));
 app.use(express.json());
 
-const uri = `mongodb+srv://yi1w:${process.env.mongodbpw}@cluster0.hyy8m1u.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://yi1w:yi1w@cluster0.hyy8m1u.mongodb.net/?retryWrites=true&w=majority`;
+const uri = "mongodb://127.0.0.1:27017/jobsearch"
 mongoose.connect(uri);
 app.get('/', (req, res) =>
     res.send('<h1>App Loaded!</h1>'));
@@ -25,6 +28,7 @@ app.get('/', (req, res) =>
 usersController(app);
 JobsController(app);
 ApplyController(app);
+CollectController(app);
 
 const PORT = 4000;
 app.listen(process.env.PORT || PORT);
