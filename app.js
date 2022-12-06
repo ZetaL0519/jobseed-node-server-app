@@ -19,8 +19,8 @@ const corsConfig = {
 app.use(cors(corsConfig));
 app.use(express.json());
 
-// const uri = `mongodb+srv://yi1w:yi1w@cluster0.hyy8m1u.mongodb.net/?retryWrites=true&w=majority`;
-const uri = "mongodb://127.0.0.1:27017/jobsearch"
+const uri = `mongodb+srv://yi1w:yi1w@cluster0.hyy8m1u.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = "mongodb://127.0.0.1:27017/jobsearch"
 mongoose.connect(uri);
 app.get('/', (req, res) =>
     res.send('<h1>App Loaded!</h1>'));
