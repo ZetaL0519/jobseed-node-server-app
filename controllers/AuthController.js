@@ -1,9 +1,7 @@
-
-import UserDao from "./users/users-dao";
-const bcrypt = require('bcrypt');
+import bcrypt from "bcrypt";
+import * as userDao from "./users/users-dao.js";
 const saltRounds = 10;
 const AuthenticationController = (app) => {
-    const userDao = UserDao.getInstance();
     const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const newUser = req.body;
         const password = newUser.password;
