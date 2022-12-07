@@ -47,10 +47,13 @@ const AuthenticationController = (app) => {
     });
 
     const profile = (req, res) => {
-        if (req.session['profile']) {
-            res.send(req.session['profile'])
-        } else {
-            res.sendStatus(403)
+        const profile = req.session['profile'];
+        if (profile) {
+            profile.password = "";
+            res.json(profile);
+        }
+        else {
+            res.sendStatus(403);
         }
     }
 
