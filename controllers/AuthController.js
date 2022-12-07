@@ -10,6 +10,8 @@ const AuthenticationController = (app) => {
         const existingUser = yield userDao.findUserByUsername(req.body.username);
         if (existingUser) {
             res.sendStatus(403);
+            console.log("user already exist")
+            console.log(existingUser)
             return;
         }
         else {
@@ -43,6 +45,7 @@ const AuthenticationController = (app) => {
         }
         else {
             res.sendStatus(403);
+            console.log("Check username or password")
         }
     });
 
@@ -54,6 +57,7 @@ const AuthenticationController = (app) => {
         }
         else {
             res.sendStatus(403);
+            console.log("No user logged in")
         }
     }
 
