@@ -47,8 +47,8 @@ const AuthenticationController = (app) => {
     });
 
     const profile = (req, res) => {
-        if (req.session['currentUser']) {
-            res.send(req.session['currentUser'])
+        if (req.session['profile']) {
+            res.send(req.session['profile'])
         } else {
             res.sendStatus(403)
         }
