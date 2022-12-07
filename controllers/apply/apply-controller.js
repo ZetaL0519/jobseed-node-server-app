@@ -25,9 +25,16 @@ const deleteApply = async(req, res) => {
     res.json(status);
 }
 
+const findAllUserApplyJob = async(req, res) => {
+    const jid = req.params.jid;
+    const users = await applyDao.findAllUserApplysJob(jid);
+    res.json(users);
+}
+
 export default (app) => {
     app.get('/api/applys', findAllApply);
     app.get('/api/:uid/applys', findAllApplyByUser);
+    app.get('/api/applys/:jid', findAllUserApplyJob);
     app.post('/api/:uid/applys/:jid', createApplyByUser);
     app.delete('/api/:uid/applys/:jid', deleteApply);
 }

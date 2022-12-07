@@ -1,6 +1,6 @@
 import CollectModel from "./collect-model.js";
 
-export const findAllCollects = () => CollectModel.find();
+export const findAllCollects = () => CollectModel.find().populate("job").populate("collectBy").exec();
 
 export const createCollectByUser = (uid, jid) => CollectModel.create({collectBy: uid, job: jid});
 

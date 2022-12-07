@@ -1,7 +1,7 @@
 import * as collectDao from "./collect-dao.js";
 
 const findAllCollect = async(req, res) => {
-    const collects = await collectDao.findAllCollect();
+    const collects = await collectDao.findAllCollects();
     res.json(collects);
 }
 
