@@ -20,10 +20,12 @@ const AuthenticationController = (app) => {
             res.json(insertedUser);
         }
     });
+
     const logout = (req, res) => {
         req.session.destroy();
         res.sendStatus(200);
     };
+
     const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const user = req.body;
         const username = user.username;
@@ -43,8 +45,18 @@ const AuthenticationController = (app) => {
             res.sendStatus(403);
         }
     });
-    app.post("/api/auth/signup", register);
+
+    const profile = (req, res) => {
+        if (req.session['currentUser']) {
+            res.send(req.session['currentUser'])
+        } else {
+            res.sendStatus(403)
+        }
+    }
+
+    app.post("/api/auth/register", register);
     app.post("/api/auth/logout", logout);
     app.post("/api/auth/login", login);
+    app.post('/api/auth/profile', profile)
 };
 export default AuthenticationController;
