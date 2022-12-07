@@ -12,7 +12,7 @@
     "resume": "https://www.jobseeker.com/api/media/documents/1cdf7944-6cab-4422-8b39-7ee580688d78/Resume-example-Circulair.svg?v=1650285945478",
     "accountType": "SEEKER",
     "isAdmin": true,
-    "location": ["Boston", "MA"]
+    "location": {"city":"Boston", "state": "MA"}
   },
   {
     "_id": 234,
@@ -27,7 +27,7 @@
     "resume": "https://www.jobseeker.com/api/media/documents/1cdf7944-6cab-4422-8b39-7ee580688d78/Resume-example-Circulair.svg?v=1650285945478",
     "accountType": "SEEKER",
     "isAdmin": false,
-    "location": ["Boston", "MA"]
+    "location": {"city":"Boston", "state": "MA"}
   },
   {
     "_id": 345,
@@ -42,7 +42,7 @@
     "resume": "https://www.jobseeker.com/api/media/documents/1cdf7944-6cab-4422-8b39-7ee580688d78/Resume-example-Circulair.svg?v=1650285945478",
     "accountType": "SEEKER",
     "isAdmin": false,
-    "location": ["Boston", "MA"]
+    "location": {"city":"Boston", "state": "MA"}
   },
   {
     "_id": 456,
@@ -57,7 +57,7 @@
     "resume": "https://www.jobseeker.com/api/media/documents/1cdf7944-6cab-4422-8b39-7ee580688d78/Resume-example-Circulair.svg?v=1650285945478",
     "accountType": "SEEKER",
     "isAdmin": false,
-    "location": ["Boston", "MA"]
+    "location": {"city":"Boston", "state": "MA"}
   },
   {
     "_id": 567,
@@ -72,7 +72,7 @@
     "resume": "https://www.jobseeker.com/api/media/documents/1cdf7944-6cab-4422-8b39-7ee580688d78/Resume-example-Circulair.svg?v=1650285945478",
     "accountType": "SEEKER",
     "isAdmin": false,
-    "location": ["Boston", "MA"]
+    "location": {"city":"Boston", "state": "MA"}
   },
   {
     "_id": 678,
@@ -83,17 +83,17 @@
     "biography": "Recruiting",
     "accountType": "EMPLOYER",
     "isAdmin": false,
-    "location": ["Boston", "MA"]
+    "location": {"city":"Boston", "state": "MA"}
   },
   {
     "_id": 789,
     "username": "meta",
     "password": "meta123",
-    "email": "meta123@amazon.com",
+    "email": "meta123@meta.com",
     "avatar": "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg",
     "biography": "Recruiting",
     "accountType": "EMPLOYER",
     "isAdmin": false,
-    "location": ["Menlo Park", "CA"]
+    "location": {"city":"Menlo Park", "state": "CA"}
   }
 ]
