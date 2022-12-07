@@ -16,7 +16,7 @@ const schema = mongoose.Schema({
     },
     location:{
         city: String,
-        State: String
+        state: String
     }
 }, {collection: 'users'});
 export default schema;
