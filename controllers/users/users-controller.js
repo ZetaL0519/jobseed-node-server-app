@@ -24,8 +24,15 @@ const updateUser = async (req, res) => {
     res.json(status)
 }
 
+const findUserById = async(req, res) => {
+    const uid = req.params.uid;
+    const user = await userDao.findUserById(uid);
+    res.json(user);
+}
+
 export default (app) => {
     app.get('/api/users', findUsers);
+    app.get('/api/users/:uid', findUserById);
     app.post('/api/users', createUser);
     app.delete('/api/users/:uid', deleteUser);
     app.put('/api/users/:uid', updateUser)
