@@ -14,6 +14,10 @@ const findAllApplyByUser = async(req, res) => {
 const createApplyByUser = async(req, res) => {
     const uid = req.params.uid;
     const jid = req.params.jid;
+    const existApply = await applyDao.findOneApply(uid, jid);
+    if(existApply){
+        res.json(existApply);
+    }
     const apply = await applyDao.createApplyByUser(uid, jid);
     res.json(apply);
 }

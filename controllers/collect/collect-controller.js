@@ -14,6 +14,10 @@ const findAllCollectByUser = async(req, res) => {
 const createCollectByUser = async(req, res) => {
     const uid = req.params.uid;
     const jid = req.params.jid;
+    const existCollect  = await collectDao.findOneCollect(uid, jid);
+    if(existCollect){
+        res.json(existCollect);
+    }
     const collect = await collectDao.createCollectByUser(uid, jid);
     res.json(collect);
 }

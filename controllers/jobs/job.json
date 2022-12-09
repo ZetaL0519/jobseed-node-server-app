@@ -21,7 +21,7 @@
 
   {
     "_id": 345,
-    "postBy" : "6392980635a76b4a80cbdef4",
+    
     "date": " 18 days ago",
     "jobtitle": "Social Media Specialist",
     "companyname": "Tootsie Roll Industries",
@@ -44,7 +44,6 @@
 
     "_id":567, 
     "date": " 2 days ago", "jobtitle": "Digital Content Writer", "companyname": "MakeStickers",
-    "postBy" : "6392980635a76b4a80cbdef4",
     "location": "Tinley Park, IL 60487",
     "salary": "$64,000 a year",
     "url": "https://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AZhccrYCUSJlZEde1UnGXnwlG1V9FU8luw-eezWnVYrwyqiUgM7Crs39bnrk2QaxjtuFYC3ubTvO7CaPKuWrp1UGhbA94Fne70H9KKnA4Np3hCDXOjh3ZkSih0coy0MRT4BIzaEKBtJYpKjiNLr0DMpOc9pvTZCRBWS9tfnMc1LAD03S-LUe5CN7JgR459eFfInoI4yWdxE3U6ynFrjGSr7lMcqcjupiukRYT4ehdpa8YL2faDcK8TUPaYv3KfRw7ksjwQKwp6NNW-tSZK8UBJ0XoAEZRc-KSmbrcUp4464MGHsJsfkHNWhbe-Nc0PYTOSPg8iTNjuQHIh5V-3TynVVubgG-Hd-zSTalM5FXjwSbfH1l2P3NanNTnbAYZKZQiWwK-me396Yfz8Fr6UK5-UVLdNE9-aCfQw4PMA==&xkcb=SoAi-M3b93ptKSsGJ0IbzkdCdPP&p=4&fvj=0&vjs=3",
@@ -53,7 +52,6 @@
   {
     "_id":678,
     "date": "EmployerActive 16 days ago",
-    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Social Media Marketer",
     "companyname": "Advanced Orthopedics and Spine Care",
     "location": "Tinley Park, IL", "salary": "$21 - $25 an hour",
@@ -62,7 +60,6 @@
   },
   {
     "_id":789, "date": " 30+ days ago",
-    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Strategist",
     "companyname": "The Black Sheep",
     "location": "Remote in Chicago, IL 60628",
@@ -72,7 +69,6 @@
   },
   { "_id":8910, 
   "date": " 18 days ago",
-  "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Specialist",
     "companyname": "Lorman Education Services",
     "location": "Hybrid remote in Chicago, IL 60661",
@@ -83,7 +79,6 @@
   {
     "_id": 91011,
     "date": " 7 days ago",
-    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Marketing Content Creator (Fashion)",
     "companyname": "JobGiraffe",
     "location": "Chicago, IL 60638 (Clearing area)",
@@ -92,7 +87,6 @@
   },
   { "_id":101112, 
   "date": " 30+ days ago",
-  "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Manager Remote",
     "companyname": "American Traveler",
     "location": "Remote in Chicago, IL", "salary": "$80,000 a year",
@@ -102,7 +96,6 @@
   {
     "_id": 111213,
     "date": " 4 days ago",
-    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Manager",
     "companyname": "Hologram",
     "location": "Remote in Chicago, IL",
@@ -113,7 +106,6 @@
   {
     "_id": 121314,
     "date": " 7 days ago",
-    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Marketing Manager (Fashion)",
     "companyname": "JobGiraffe",
     "location": "Chicago, IL 60638 (Clearing area)",
