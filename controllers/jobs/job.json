@@ -1,6 +1,7 @@
 [
   {
     "_id": 123,
+    "postBy" : "6392980635a76b4a80cbdef4",
     "date": "Just posted",
     "jobtitle": "Junior Social Media Specialist",
     "companyname": "MakeStickers",
@@ -11,6 +12,7 @@
   },
   {
     "_id": 234,
+    "postBy" : "6392980635a76b4a80cbdef4",
     "date": " 30+ days ago",
     "jobtitle": "Social Media Digital Manager",
     "companyname": "Dan Newlin Injury Attorneys",
@@ -21,6 +23,7 @@
 
   {
     "_id": 345,
+    "postBy" : "6392980635a76b4a80cbdef4",
     "date": " 18 days ago",
     "jobtitle": "Social Media Specialist",
     "companyname": "Tootsie Roll Industries",
@@ -31,6 +34,7 @@
   },
   {
     "_id": 456,
+    "postBy" : "6392980635a76b4a80cbdef4",
     "date": " 30+ days ago",
     "jobtitle": "Entry Level Digital Marketing Analyst (SEO, SEM)-Chicagoland & NWI Only", "companyname": "InTouch Practice Communications",
     "location": "Remote in Chicago, IL+3 locations",
@@ -40,14 +44,18 @@
   },
   {
 
-    "_id":567, "date": " 2 days ago", "jobtitle": "Digital Content Writer", "companyname": "MakeStickers",
+    "_id":567, 
+    "date": " 2 days ago", "jobtitle": "Digital Content Writer", "companyname": "MakeStickers",
+    "postBy" : "6392980635a76b4a80cbdef4",
     "location": "Tinley Park, IL 60487",
     "salary": "$64,000 a year",
     "url": "https://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AZhccrYCUSJlZEde1UnGXnwlG1V9FU8luw-eezWnVYrwyqiUgM7Crs39bnrk2QaxjtuFYC3ubTvO7CaPKuWrp1UGhbA94Fne70H9KKnA4Np3hCDXOjh3ZkSih0coy0MRT4BIzaEKBtJYpKjiNLr0DMpOc9pvTZCRBWS9tfnMc1LAD03S-LUe5CN7JgR459eFfInoI4yWdxE3U6ynFrjGSr7lMcqcjupiukRYT4ehdpa8YL2faDcK8TUPaYv3KfRw7ksjwQKwp6NNW-tSZK8UBJ0XoAEZRc-KSmbrcUp4464MGHsJsfkHNWhbe-Nc0PYTOSPg8iTNjuQHIh5V-3TynVVubgG-Hd-zSTalM5FXjwSbfH1l2P3NanNTnbAYZKZQiWwK-me396Yfz8Fr6UK5-UVLdNE9-aCfQw4PMA==&xkcb=SoAi-M3b93ptKSsGJ0IbzkdCdPP&p=4&fvj=0&vjs=3",
     "summary": "2-4 years of experience as a marketing content writer.\nFollow an editorial calendar, collaborating with other marketing team members to ensure timely delivery…"
   },
   {
-    "_id":678, "date": "EmployerActive 16 days ago",
+    "_id":678,
+    "date": "EmployerActive 16 days ago",
+    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Social Media Marketer",
     "companyname": "Advanced Orthopedics and Spine Care",
     "location": "Tinley Park, IL", "salary": "$21 - $25 an hour",
@@ -56,6 +64,7 @@
   },
   {
     "_id":789, "date": " 30+ days ago",
+    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Strategist",
     "companyname": "The Black Sheep",
     "location": "Remote in Chicago, IL 60628",
@@ -63,7 +72,9 @@
     "url": "https://www.indeed.com/rc/clk?jk=d9cb689e7af00109&fccid=dd93d9549279ebf1&vjs=3",
     "summary": "Competitive salary for an entry-level position in the digital marketing field.\nProficiency in digital ad platforms.\nFree gym membership in the building."
   },
-  { "_id":8910, "date": " 18 days ago",
+  { "_id":8910, 
+  "date": " 18 days ago",
+  "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Specialist",
     "companyname": "Lorman Education Services",
     "location": "Hybrid remote in Chicago, IL 60661",
@@ -74,13 +85,16 @@
   {
     "_id": 91011,
     "date": " 7 days ago",
+    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Marketing Content Creator (Fashion)",
     "companyname": "JobGiraffe",
     "location": "Chicago, IL 60638 (Clearing area)",
     "salary": "Up to $74,000 a year",
     "url": "https://www.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0CA2eroeGOySxfayHzrIonei8bcJtLSmJ-GGOHgccT6KhVX3BZUuArrvrC2rmUesc3T4vaPh3krD6PrLpXAts4mPFsgT32HRU59pISEiVopLFjaU4y2BX69BaHsOc3xhe6-paYHhkyYcmS8XQ6QzUWNCyk2nIJL68KqyAwAVjy1nnmAsYPDUvU3w8vxpp2F0PWPdnFnEF8AVuWws1sDTfWXZkUc5R1U1SNC9Mia3S7rBeWql8vyaz75j5oAyRwNB4Qv-YyE5nG7I0i74LrHniEYg2qMtgoo3l18naqy-89fI5NygKZ2wQkZGqxp2Iunm6QfQAhUcwwST3u-vsZTAxnp8hLAojxNuteqnggwTVZv3ReH4Wgznqz13OMN9tX75LPqIKgfoVuj0cSXCJhSf8Ii74IYvNe60gwGSF8uV71ojbc6gl3kMsfhh7ReX0i0PrZrCdHo3g8difya3Ys1FMjuEGwgueAy62jlKksWFhbvlFWerewskBBotqAeTmtkt9KIElRiZ4FR1uE&xkcb=SoBn-M3b93ptKysGJ0IbzkdCdPP&p=8&fvj=1&vjs=3", "summary": "Support marketing and branding initiatives.\nUp to $74,000 to start plus excellent company-sponsored benefits*.\nCreate content for social media."
   },
-  { "_id":101112, "date": " 30+ days ago",
+  { "_id":101112, 
+  "date": " 30+ days ago",
+  "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Manager Remote",
     "companyname": "American Traveler",
     "location": "Remote in Chicago, IL", "salary": "$80,000 a year",
@@ -90,6 +104,7 @@
   {
     "_id": 111213,
     "date": " 4 days ago",
+    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Digital Marketing Manager",
     "companyname": "Hologram",
     "location": "Remote in Chicago, IL",
@@ -100,6 +115,7 @@
   {
     "_id": 121314,
     "date": " 7 days ago",
+    "postBy" : "6392980635a76b4a80cbdef4",
     "jobtitle": "Marketing Manager (Fashion)",
     "companyname": "JobGiraffe",
     "location": "Chicago, IL 60638 (Clearing area)",

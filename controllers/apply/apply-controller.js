@@ -31,10 +31,25 @@ const findAllUserApplyJob = async(req, res) => {
     res.json(users);
 }
 
+const acceptApply = async(req, res) => {
+    const uid = req.params.uid;
+    const jid = req.params.jid;
+    const apply = await applyDao.acceptApply(uid, jid);
+    res.json(apply);
+}
+
+const findAllAcceptedApplys = async(req, res) => {
+    const applys = await applyDao.findAllAcceptedApplys();
+    res.json(applys);
+}
+
+
 export default (app) => {
     app.get('/api/applys', findAllApply);
     app.get('/api/:uid/applys', findAllApplyByUser);
     app.get('/api/applys/:jid', findAllUserApplyJob);
     app.post('/api/:uid/applys/:jid', createApplyByUser);
     app.delete('/api/:uid/applys/:jid', deleteApply);
+    app.put('/api/users/:uid/accept/:jid/', acceptApply);
+    app.get('/api/applys/accept', findAllAcceptedApplys);
 }

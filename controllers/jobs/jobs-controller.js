@@ -6,9 +6,10 @@ const findJobs = async (req, res) => {
 }
 
 const updateJob = async(req, res) => {
+    const uid = req.params.uid;
     const jid = req.params.jid;
     const job = req.body;
-    const status = await userDao.updateUser(jid, job);
+    const status = await userDao.updateUser(uid, jid, job);
     res.json(status)
 }
 
@@ -25,9 +26,24 @@ const findJobBylocationtitle = async(req, res) => {
     res.json(jobs);
 }
 
+const findAllPostJobs = async(req, res) => {
+    const uid = req.params.uid;
+    const jobs = await jobDao.findAllPostJobs(uid);
+    res.json(jobs);
+}
+
+const createJob = async (req, res) => {
+    const job = req.body;
+    const uid = req.params.uid;
+    const newjob = await jobDao.createJob(uid, job);
+    res.json(newjob)
+}
+
 export default (app) => {
     app.get('/api/jobs', findJobs);
-    app.put('/api/jobs/:jid', updateJob);
+    app.get('/api/users/:uid/jobs', findAllPostJobs);
+    app.post('/api//users/:uid/jobs',createJob);
+    app.put('/api/users/:uid/jobs/:jid', updateJob);
     app.get('/api/jobs/:key', findJobByKey)
     app.get('/api/jobs/:location/:title', findJobBylocationtitle)
 }

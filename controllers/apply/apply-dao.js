@@ -10,3 +10,7 @@ export const deleteApply = (uid, jid) => ApplyModel.deleteOne({applyBy: uid, job
 export const findAllApplyByUser = (uid) => ApplyModel.find({applyBy: uid}).populate("job").exec();
 
 export const findAllUserApplysJob = (jid) => ApplyModel.find({job: jid}).populate("applyBy").exec();
+
+export const acceptApply = (uid, jid) => ApplyModel.updateOne({applyBy: uid, job: jid},{$set: {accept: true}});
+
+export const findAllAcceptedApplys = () => ApplyModel.find({accept: true}).populate("applyBy").populate("job").populate("postBy").exec()
