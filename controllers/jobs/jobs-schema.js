@@ -1,10 +1,11 @@
-import mongoose,{Schema} from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
+
 const schema = mongoose.Schema({
     postBy: {type: Schema.Types.ObjectId, ref: "userModel"},
     jobtitle: {type: String, required: true},
     date: {type: String, required: true},
     companyname: {type: String, required: true},
-    email: {type: String, required: true},
+    email: {type: String},
     location: String,
     salary: String,
     url: String,

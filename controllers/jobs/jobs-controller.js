@@ -32,7 +32,7 @@ const findAllPostJobs = async(req, res) => {
     res.json(jobs);
 }
 
-const createJob = async (req, res) => {
+const createJob = async(req, res) => {
     const job = req.body;
     const uid = req.params.uid;
     const newjob = await jobDao.createJob(uid, job);
@@ -42,7 +42,7 @@ const createJob = async (req, res) => {
 export default (app) => {
     app.get('/api/jobs', findJobs);
     app.get('/api/users/:uid/jobs', findAllPostJobs);
-    app.post('/api//users/:uid/jobs',createJob);
+    app.post('/api/users/:uid/jobs', createJob);
     app.put('/api/users/:uid/jobs/:jid', updateJob);
     app.get('/api/jobs/:key', findJobByKey)
     app.get('/api/jobs/:location/:title', findJobBylocationtitle)
