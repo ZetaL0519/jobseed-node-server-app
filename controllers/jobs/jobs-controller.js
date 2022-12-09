@@ -13,6 +13,12 @@ const updateJob = async(req, res) => {
     res.json(status)
 }
 
+const findJobById = async(req, res) => {
+    const jid = req.params.jid;
+    const job = await jobDao.findJobById(jid);
+    res.json(job);
+}
+
 const findJobByKey = async(req, res) => {
     const key = req.params.key;
     const jobs = await jobDao.findJobByKey(key);
@@ -41,6 +47,7 @@ const createJob = async(req, res) => {
 
 export default (app) => {
     app.get('/api/jobs', findJobs);
+    app.get('/api/jobs/onejob/:jid', findJobById)
     app.get('/api/users/:uid/jobs', findAllPostJobs);
     app.post('/api/users/:uid/jobs', createJob);
     app.put('/api/users/:uid/jobs/:jid', updateJob);
