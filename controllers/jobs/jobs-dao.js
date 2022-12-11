@@ -8,7 +8,7 @@ export const updateJob = (jid, job) => JobModel.updateOne({_id: jid}, {$set: job
 
 export const deleteJob = (jid) => JobModel.deleteOne({_id: jid})
 
-export const findJobById = (jid) => JobModel.findById(jid);
+export const findJobById = (jid) => JobModel.findById(jid).populate("postBy").exec();
 
 export const findJobByKey = async (key) => {
     String(key)
