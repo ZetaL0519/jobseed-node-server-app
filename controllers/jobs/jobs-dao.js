@@ -2,9 +2,11 @@ import JobModel from "./jobs-model.js"
 
 export const findJobs = () => JobModel.find().populate("postBy").exec();
 
-export const createJob = (uid, job) => JobModel.create({...job, postBy: uid}).populate("postBy").exec();
+export const createJob = (uid, job) => JobModel.create({...job, postBy: uid});
 
-export const updateJob = (uid, jid, job) => JobModel.updateOne({_id: jid, postBy: uid}, {$set: job})
+export const updateJob = (jid, job) => JobModel.updateOne({_id: jid}, {$set: job})
+
+export const deleteJob = (jid) => JobModel.deleteOne({_id: jid})
 
 export const findJobById = (jid) => JobModel.findById(jid);
 
