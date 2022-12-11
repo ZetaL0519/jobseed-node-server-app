@@ -17,9 +17,11 @@ const createApplyByUser = async(req, res) => {
     const existApply = await applyDao.findOneApply(uid, jid);
     if(existApply){
         res.json(existApply);
+    }else{
+        const apply = await applyDao.createApplyByUser(uid, jid);
+        res.json(apply);
     }
-    const apply = await applyDao.createApplyByUser(uid, jid);
-    res.json(apply);
+    
 }
 
 const deleteApply = async(req, res) => {
