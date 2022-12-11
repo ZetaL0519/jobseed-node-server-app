@@ -62,6 +62,13 @@ const deleteApplyById = async(req, res) => {
     res.json(status)
 }
 
+const updateApply = async(req, res) => {
+    const aid = req.params.aid;
+    const apply = req.body;
+    const newapply = await applyDao.updateApply(aid, apply);
+    res.json(newapply)
+}
+
 export default (app) => {
     app.get('/api/applys', findAllApply);
     app.get('/api/:uid/applys', findAllApplyByUser);
@@ -71,5 +78,6 @@ export default (app) => {
     app.delete('/api/:uid/applys/:jid', deleteApply);
     app.delete('/api/applys/:aid', deleteApplyById)
     app.put('/api/users/:uid/accept/:jid/', acceptApply);
+    app.put('/api/applys/:aid', updateApply)
     app.get('/api/applys/accept', findAllAcceptedApplys);
 }

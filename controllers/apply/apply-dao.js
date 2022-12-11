@@ -5,6 +5,8 @@ export const findAllApplys = () => ApplyModel.find().populate("job").populate("a
 
 export const createApplyByUser = (uid, jid) => ApplyModel.create({applyBy: uid, job: jid});
 
+export const updateApply = (aid, apply) => ApplyModel.updateOne({_id: aid}, {$set: apply})
+
 export const deleteApply = (uid, jid) => ApplyModel.deleteOne({applyBy: uid, job: jid});
 
 export const deleteApplyById = (aid) => ApplyModel.deleteOne({_id: aid})
