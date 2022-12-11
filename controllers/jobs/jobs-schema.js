@@ -5,7 +5,6 @@ const schema = mongoose.Schema({
     jobtitle: {type: String, required: true},
     date: {type: String, required: true},
     companyname: {type: String, required: true},
-    email: {type: String},
     location: String,
     salary: String,
     url: String,

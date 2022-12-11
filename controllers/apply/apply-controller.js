@@ -47,11 +47,18 @@ const findAllAcceptedApplys = async(req, res) => {
     res.json(applys);
 }
 
+const findOneApply = async(req, res) => {
+    const uid = req.params.uid;
+    const jid = req.params.jid;
+    const apply = await applyDao.findOneApply(uid, jid);
+    res.json(apply);
+}
 
 export default (app) => {
     app.get('/api/applys', findAllApply);
     app.get('/api/:uid/applys', findAllApplyByUser);
     app.get('/api/applys/:jid', findAllUserApplyJob);
+    app.get('/api/:uid/applys/:jid', findOneApply);
     app.post('/api/:uid/applys/:jid', createApplyByUser);
     app.delete('/api/:uid/applys/:jid', deleteApply);
     app.put('/api/users/:uid/accept/:jid/', acceptApply);
