@@ -30,9 +30,17 @@ const deleteCollect = async(req, res) => {
     res.json(status);
 }
 
+const findOneCollect = async(req, res) => {
+    const uid = req.params.uid;
+    const jid = req.params.jid;
+    const collect = await collectDao.findOneCollect(uid, jid);
+    res.json(collect);
+}
+
 export default (app) => {
     app.get('/api/collects', findAllCollect);
     app.get('/api/:uid/collects', findAllCollectByUser);
     app.post('/api/:uid/collects/:jid', createCollectByUser);
+    app.get('/api/:uid/collects/:jid', findOneCollect);
     app.delete('/api/:uid/collects/:jid', deleteCollect);
 }
