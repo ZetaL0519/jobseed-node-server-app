@@ -10,4 +10,4 @@ export const updateUser = (uid, user) => usersModel.updateOne({_id: uid}, {$set:
 
 export const findUserByUsername = (username) => usersModel.findOne({username: username})
 
-export const findUserById = (uid) => usersModel.findOne({_id: uid});
+export const findUserById = (uid) => usersModel.findById(uid)

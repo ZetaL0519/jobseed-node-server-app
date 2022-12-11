@@ -50,7 +50,7 @@ export default (app) => {
     app.get('/api/jobs/onejob/:jid', findJobById)
     app.get('/api/users/:uid/jobs', findAllPostJobs);
     app.post('/api/users/:uid/jobs', createJob);
-    app.put('/api/users/:uid/jobs/:jid', updateJob);
+    app.put('/api/jobs/:jid', updateJob);
     app.get('/api/jobs/:key', findJobByKey)
     app.get('/api/jobs/:location/:title', findJobBylocationtitle)
 }

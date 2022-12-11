@@ -6,7 +6,7 @@ export const createJob = (uid, job) => JobModel.create({...job, postBy: uid}).po
 
 export const updateJob = (uid, jid, job) => JobModel.updateOne({_id: jid, postBy: uid}, {$set: job})
 
-export const findJobById = (jid) => JobModel.findOne({_id: jid});
+export const findJobById = (jid) => JobModel.findById(jid);
 
 export const findJobByKey = async (key) => {
     String(key)
