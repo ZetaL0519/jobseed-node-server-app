@@ -7,6 +7,7 @@ import usersController from './controllers/users/users-controller.js';
 import JobsController from './controllers/jobs/jobs-controller.js';
 import ApplyController from "./controllers/apply/apply-controller.js";
 import CollectController from "./controllers/collect/collect-controller.js";
+import FollowController from "./controllers/follow/follow-controller.js";
 import * as dotenv from 'dotenv';
 import AuthController from "./controllers/AuthController.js";
 dotenv.config()
@@ -48,6 +49,7 @@ JobsController(app);
 ApplyController(app);
 CollectController(app);
 AuthController(app);
+FollowController(app);
 
 const PORT = 4000;
 app.listen(process.env.PORT || PORT);
