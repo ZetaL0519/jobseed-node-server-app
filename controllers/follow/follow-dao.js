@@ -4,4 +4,6 @@ export const createFollow = (company, uid) => FollowModel.create({...company, fo
 
 export const deleteFollow = (cid, uid) => FollowModel.deleteOne({companyId: cid, follower: uid})
 
+export const findOneFollow = (cid, uid) => FollowModel.findOne({companyId: cid, follower: uid})
+
 export const findFollowsByUid = (uid) => FollowModel.find({follower: uid})
