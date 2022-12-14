@@ -25,7 +25,13 @@ const findFollowsByUid = async(req, res) => {
     res.json(follows)
 }
 
+const findAllFollows = async(req, res) => {
+    const follows = await followDao.findAllFollows()
+    res.json(follows)
+}
+
 export default (app) => {
+    app.get('/api/follows', findAllFollows)
     app.post('/api/follows/:uid', createFollow)
     app.delete('/api/follows/:uid/:cid', deleteFollow)
     app.get('/api/follows/:uid', findFollowsByUid)

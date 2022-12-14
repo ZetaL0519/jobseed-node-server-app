@@ -7,3 +7,5 @@ export const deleteFollow = (cid, uid) => FollowModel.deleteOne({companyId: cid,
 export const findOneFollow = (cid, uid) => FollowModel.findOne({companyId: cid, follower: uid})
 
 export const findFollowsByUid = (uid) => FollowModel.find({follower: uid})
+
+export const findAllFollows = () => FollowModel.find();
