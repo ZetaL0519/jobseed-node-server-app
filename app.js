@@ -8,6 +8,7 @@ import JobsController from './controllers/jobs/jobs-controller.js';
 import ApplyController from "./controllers/apply/apply-controller.js";
 import CollectController from "./controllers/collect/collect-controller.js";
 import FollowController from "./controllers/follow/follow-controller.js";
+import WeatherController from "./controllers/weather/weather-controller.js";
 import * as dotenv from 'dotenv';
 import AuthController from "./controllers/AuthController.js";
 dotenv.config()
@@ -50,6 +51,7 @@ ApplyController(app);
 CollectController(app);
 AuthController(app);
 FollowController(app);
+WeatherController(app);
 
 const PORT = 4000;
 app.listen(process.env.PORT || PORT);
