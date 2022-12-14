@@ -8,8 +8,9 @@ const createFollow = async(req, res) => {
 }
 
 const deleteFollow = async(req, res) => {
-    const fid = req.params.fid;
-    const status = await followDao.deleteFollow(fid)
+    const uid = req.params.uid;
+    const cid = req.params.cid;
+    const status = await followDao.deleteFollow(cid, uid)
     res.json(status)
 }
 
@@ -21,6 +22,6 @@ const findFollowsByUid = async(req, res) => {
 
 export default (app) => {
     app.post('/api/follows/:uid', createFollow)
-    app.delete('/api/follows/:fid', deleteFollow)
+    app.delete('/api/follows/:uid/:cid', deleteFollow)
     app.get('/api/follows/:uid', findFollowsByUid)
 }
