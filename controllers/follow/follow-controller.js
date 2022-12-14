@@ -3,7 +3,7 @@ import * as followDao from "./follow-dao.js"
 const createFollow = async(req, res) => {
     const uid = req.params.uid;
     const company = req.body;
-    const existedFollow = followDao.findOneFollow(company.companyId, uid)
+    const existedFollow = await followDao.findOneFollow(company.companyId, uid)
     if(existedFollow){
         res.json(existedFollow)
     }else{
